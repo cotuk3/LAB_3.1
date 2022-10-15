@@ -1,0 +1,4 @@
+﻿new MyConsoleMenu().Start();
+
+
+

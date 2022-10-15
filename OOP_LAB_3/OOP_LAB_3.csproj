@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IConsoleMenu\IConsoleMenu.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="MyString">
+      <HintPath>..\..\OOP_LAB_2\MyString\bin\Debug\MyString.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+	  <Using Include="My_String" />
+	  <Using Include="OOP_LAB_3" />
+	  <Using Include="OOP_LAB_3.MyConsoleMenu"/>
+  </ItemGroup>
+
+</Project>
