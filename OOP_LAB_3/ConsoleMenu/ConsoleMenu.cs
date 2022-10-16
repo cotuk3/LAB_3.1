@@ -12,7 +12,12 @@ class MyConsoleMenu : ConsoleMenu.ConsoleMenu
 
     static Func<string> askFilePath = () => { Console.Write("Enter file path:"); string s = Console.ReadLine(); return s; };
 
-    NewMyString[] autoFillArr = { "hi", "my", "name", "Bohdan" };
+    NewMyString[][] autoFillArr = 
+        { 
+        new NewMyString[]{ "Hi", "my", "name", "Bohdan" },
+        new NewMyString[]{ "Hallo", "ich", "heiße", "Bohdan"},
+        new NewMyString[]{ "Привіт", "мена", "звати", "Богдан"},
+    };
     public MyConsoleMenu()
     {
         commands.Add("/info", () => Info());
@@ -161,7 +166,8 @@ class MyConsoleMenu : ConsoleMenu.ConsoleMenu
     public NewMyString[] FillArr(int fill)
     {
         if (fill == 1)
-            return autoFillArr;
+            return autoFillArr[new Random().Next(0,2)];
+
         else
         {
             string input = "";
@@ -184,7 +190,7 @@ class MyConsoleMenu : ConsoleMenu.ConsoleMenu
     public List<NewMyString> FillList(int fill)
     {
         if (fill == 1)
-            return new List<NewMyString>(autoFillArr);
+            return new List<NewMyString>(autoFillArr[new Random().Next(0, 2)]);
         else
         {
             string input = "";
