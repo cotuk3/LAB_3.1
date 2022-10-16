@@ -24,7 +24,7 @@
   <ItemGroup>
 	  <Using Include="My_String" />
 	  <Using Include="OOP_LAB_3" />
-	  <Using Include="OOP_LAB_3.MyConsoleMenu"/>
+	  <Using Include="OOP_LAB_3.MyConsoleMenu" />
   </ItemGroup>
 
 </Project>
