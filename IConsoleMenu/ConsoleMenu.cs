@@ -9,10 +9,3 @@ public abstract class ConsoleMenu : IConsoleMenu
     public abstract void Start();
 }
 
-public interface IConsoleMenu
-{
-    void Start();
-    void Info();
-    void Show(IEnumerable collection);
-
-}
