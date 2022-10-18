@@ -110,7 +110,8 @@ public class CustomSerializer : IFormatter
         {
             using (StreamReader sr = new StreamReader(serializationStream))
             {
-                sr.ReadLine();
+                string s = sr.ReadLine();
+                if (string.IsNullOrEmpty(s)) return null;
 
                 string[] length = sr.ReadLine().Split(":"); // Length of list format Length : Value
 
